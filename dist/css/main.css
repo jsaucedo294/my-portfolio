@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif");
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #333;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'PT Serif', serif;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: 1; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    font-size: 2rem;
+    text-transform: uppercase; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:hover {
+    color: #F7931E; }
+
+.menu-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px; }
+  .menu-btn .btn-line {
+    width: 45px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px; }
+
+.menu-profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  overflow: hidden; }
+
+.menu-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50%;
+  overflow: hidden; }
