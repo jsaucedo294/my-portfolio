@@ -9,6 +9,20 @@ body {
   margin: 0;
   font-family: 'PT Serif', serif;
   line-height: 1.5; }
+  body #home-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    body #home-content .social-icons {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      body #home-content .social-icons .fab {
+        margin: 0 40px; }
 
 h1,
 h2,
@@ -34,9 +48,25 @@ a {
     color: #F7931E; }
 
 .menu-btn {
+  transition: all .5s ease-in-out;
   position: absolute;
   top: 25px;
-  right: 25px; }
+  right: 25px;
+  z-index: 5; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transition: all .5s ease-in-out;
+      transform: rotate(45deg) translate(10px, 10px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      transition: all .5s ease-in-out;
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transition: all .5s ease-in-out;
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(4) {
+      transition: all .5s ease-in-out;
+      transform: rotate(-45deg) translate(7px, -7px); }
   .menu-btn .btn-line {
     width: 45px;
     height: 3px;
@@ -49,7 +79,11 @@ a {
   left: 0;
   height: 100vh;
   width: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  visibility: hidden;
+  transition: all .5s ease-in-out; }
+  .menu-profile.show {
+    visibility: visible; }
 
 .menu-nav {
   position: absolute;
@@ -57,4 +91,12 @@ a {
   right: 0;
   height: 100vh;
   width: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all .5s ease-in-out; }
+  .menu-nav.show {
+    visibility: visible; }

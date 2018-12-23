@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 $primary-color: #333;
 $secondary-color: #F7931E; 
+@mixin easeOut {
+    transition: all .5s ease-in-out;
+}
 
 * {
     box-sizing: border-box;
@@ -13,6 +16,23 @@ body {
     margin: 0;
     font-family: 'PT Serif', serif;
     line-height: 1.5;
+    #home-content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .social-icons {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .fab {
+                margin: 0 40px;
+            }
+        }
+    }
 }
 h1, 
 h2, 
@@ -40,9 +60,32 @@ a {
 
 // MENU BTN
 .menu-btn {
+    @include easeOut;
     position: absolute;
     top: 25px;
     right: 25px;
+    z-index: 5;
+    &.close {
+        transform: rotate(180deg);
+        .btn-line {
+            &:nth-child(1) {
+                 @include easeOut;
+                transform: rotate(45deg) translate(10px, 10px);
+            }
+            &:nth-child(2) {
+                @include easeOut;
+                opacity: 0
+            }
+            &:nth-child(3) {
+                @include easeOut;
+                opacity: 0
+            }
+            &:nth-child(4) {
+                @include easeOut;
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+    }
     .btn-line {
         width: 45px;
         height: 3px;
@@ -59,6 +102,11 @@ a {
     height: 100vh;
     width: 50%;
     overflow: hidden;
+    visibility: hidden;
+    @include easeOut;
+    &.show {
+        visibility: visible;
+    }
 }
 //Menu-left
 .menu-nav {
@@ -68,6 +116,15 @@ a {
     height: 100vh;
     width: 50%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    @include easeOut;
+    &.show {
+        visibility: visible;
+    }
 }
 
 
