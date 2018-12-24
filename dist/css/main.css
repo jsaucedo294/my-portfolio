@@ -2,11 +2,15 @@
 * {
   box-sizing: border-box; }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
 body {
   background-color: #333;
   color: #fff;
   height: 100%;
-  margin: 0;
   font-family: 'PT Serif', serif;
   line-height: 1.5; }
   body #home-content {
@@ -47,6 +51,11 @@ a {
   a:hover {
     color: #F7931E; }
 
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px; }
+
 .menu-btn {
   transition: all .5s ease-in-out;
   position: absolute;
@@ -79,24 +88,43 @@ a {
   left: 0;
   height: 100vh;
   width: 50%;
+  background-color: rgba(38, 38, 38, 0.7);
   overflow: hidden;
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transform: translate3d(0, 1000px, 0);
   transition: all .5s ease-in-out; }
   .menu-profile.show {
-    visibility: visible; }
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 .menu-nav {
+  list-style: none;
   position: absolute;
   top: 0;
   right: 0;
+  margin: 0;
   height: 100vh;
   width: 50%;
+  background-color: rgba(20, 20, 20, 0.9);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  z-index: 1;
+  transform: translate3d(0, -1000px, 0);
   transition: all .5s ease-in-out; }
   .menu-nav.show {
-    visibility: visible; }
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
+  .menu-nav .nav-item {
+    padding-bottom: 20px; }
+    .menu-nav .nav-item a {
+      font-size: 40px;
+      text-transform: uppercase; }
