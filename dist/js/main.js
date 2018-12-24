@@ -3,7 +3,7 @@ const menuProfile = document.querySelector('.menu-profile');
 const menuNav = document.querySelector('.menu-nav');
 const menuItems = document.querySelectorAll('.nav-item');
 
-document.addEventListener('click', toggleMenu);
+menuBtn.addEventListener('click', toggleMenu);
 
 let btnToggled = false;
 function toggleMenu(){

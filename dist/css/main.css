@@ -53,8 +53,10 @@ a {
 
 .logo {
   position: absolute;
-  top: 25px;
-  left: 25px; }
+  top: 10px;
+  left: 10px; }
+  .logo img {
+    width: 70px; }
 
 .menu-btn {
   transition: all .5s ease-in-out;
@@ -101,6 +103,13 @@ a {
   .menu-profile.show {
     visibility: visible;
     transform: translate3d(0, 0, 0); }
+  .menu-profile .my-portrait {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+    background-image: url("../img/my-avatar-2.png");
+    background-size: cover; }
 
 .menu-nav {
   list-style: none;
