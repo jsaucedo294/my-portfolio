@@ -16,10 +16,21 @@ html, body {
 
 body {
     background-color: $primary-color;
+    background-image: url('../img/bg-coding.jpg');
     color: #fff;
     height: 100%;
     font-family: 'PT Serif', serif;
     line-height: 1.5;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($primary-color, 0.9);
+        z-index: -1;
+    }
     #home-content {
         position: absolute;
         width: 100%;
