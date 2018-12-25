@@ -28,7 +28,7 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba($primary-color, 0.9);
+        background-color: rgba($primary-color, .9);
         z-index: -1;
     }
     #home-content {
@@ -172,10 +172,20 @@ a {
     }
     .nav-item {
         padding-bottom: 20px;
+        @include easeOut;
+        transform: translate3d(1000px, 0, 0);
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
         a {
             font-size: 40px;
             text-transform: uppercase;
         }
+    }
+    @for $x from 1 through 3 {
+       .nav-item:nth-child(#{$x}){
+            transition-delay: .1s * $x;
+       }     
     }
 }
 
