@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+$primary-color: #333;
+$secondary-color: #F7931E; 
+@mixin easeOut {
+    transition: all .5s ease-in-out;
+}

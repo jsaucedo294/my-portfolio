@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
-$primary-color: #333;
-$secondary-color: #F7931E; 
-@mixin easeOut {
-    transition: all .5s ease-in-out;
-}
+@import 'config';
+@import 'menu';
+@import 'media';
 
 * {
     box-sizing: border-box;
@@ -32,20 +29,20 @@ body {
         z-index: -1;
     }
     #home-content {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        .social-icons {
-            margin-top: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .fab {
-                margin: 0 40px;
-            }
+        margin-top: 30vh;
+    }
+    .social-icons {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            margin: 0 20px;
         }
     }
 }
@@ -72,122 +69,3 @@ a {
         color: $secondary-color;
     }
 }
-// LOGO
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    img {
-        width: 70px;
-    }
-}
-// MENU BTN
-.menu-btn {
-    @include easeOut;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    z-index: 5;
-    &.close {
-        transform: rotate(180deg);
-        .btn-line {
-            &:nth-child(1) {
-                 @include easeOut;
-                transform: rotate(45deg) translate(10px, 10px);
-            }
-            &:nth-child(2) {
-                @include easeOut;
-                opacity: 0
-            }
-            &:nth-child(3) {
-                @include easeOut;
-                opacity: 0
-            }
-            &:nth-child(4) {
-                @include easeOut;
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
-        }
-    }
-    .btn-line {
-        width: 45px;
-        height: 3px;
-        background-color: #fff;
-        margin-bottom: 5px;
-    }
-}
-// MENU SECTIONS
-// Menu-right
-.menu-profile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 50%;
-    background-color: rgba(darken($primary-color, 5), 0.7);
-    overflow: hidden;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    transform: translate3d(0, 1000px, 0);
-    @include easeOut;
-    &.show {
-        visibility: visible;
-        transform: translate3d(0, 0, 0);
-    }
-    .my-portrait {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        border: solid 3px #fff;
-        background-image: url('../img/my-avatar-2.png');
-        background-size: cover;
-    }
-}
-//Menu-left
-.menu-nav {
-    list-style: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    height: 100vh;
-    width: 50%;
-    background-color: rgba(darken($primary-color, 12), 0.9);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    z-index: 1;
-    transform: translate3d(0, -1000px, 0);
-    @include easeOut;
-    &.show {
-        visibility: visible;
-        transform: translate3d(0, 0, 0);
-    }
-    .nav-item {
-        padding-bottom: 20px;
-        @include easeOut;
-        transform: translate3d(1000px, 0, 0);
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
-        a {
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-    }
-    @for $x from 1 through 3 {
-       .nav-item:nth-child(#{$x}){
-            transition-delay: .1s * $x;
-       }     
-    }
-}
-
-
-// CONTENT
