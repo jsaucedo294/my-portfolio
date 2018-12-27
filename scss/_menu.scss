@@ -1,8 +1,8 @@
 // LOGO
 .logo {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 40px;
     img {
         width: 70px;
     }
@@ -11,8 +11,8 @@
 .menu-btn {
     @include easeOut;
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 35px;
+    right: 40px;
     z-index: 5;
     &.close {
         transform: rotate(180deg);

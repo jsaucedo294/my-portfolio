@@ -1,10 +1,10 @@
 @mixin phone {
-    @media screen and (max-width: 414px){
+    @media screen and (max-width: 415px){
         @content;
     }
 }
 @mixin tablet {
-    @media (min-width: 415px) and (max-width: 750px) {
+    @media (min-width: 416px) and (max-width: 750px) {
         @content;
     }
 }
@@ -15,6 +15,9 @@
 }
 
 @include phone {
+    .logo {
+        left: 20px;
+    }
     #home-content {
         margin-top: 20vh !important;
     }
@@ -28,6 +31,9 @@
         font-size: 5rem !important;
     }
     // Menu Media
+    .menu-btn {
+        right: 30px !important;
+    }
     .menu-profile {
         width: 100%;
         height: 40vh;
@@ -67,5 +73,19 @@
         &.show {
             transform: translate3d(0, 0, 0);
         }
+    }
+}
+@include laptop {
+    #home-content {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+    .social-icons {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
     }
 }
