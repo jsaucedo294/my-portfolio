@@ -51,6 +51,32 @@
             transform: translate3d(0, 0, 0);
         }
     }
+    //ABOUT MEDIA
+    #about {
+        .about-me {
+            flex-direction: column  !important;
+            height: auto !important;
+            padding-top: 60px;
+            .my-face {
+                width: 250px !important;
+                height: 250px !important;
+            }
+            p {
+                width: 90% !important;
+                font-size: 25px !important;
+            }
+        }
+        .skill-set-container {
+            grid-template-columns: auto !important;
+            .skill-container {
+                width: 300px !important;
+                .skill-tag h3 {
+                    font-size: 30px !important;
+                }
+            }
+        }
+
+    }
 }
 @include tablet {
     .lg-heading {
@@ -74,6 +100,22 @@
             transform: translate3d(0, 0, 0);
         }
     }
+    //ABOUT MEDIA
+    #about {
+        .about-me {
+            flex-direction: column  !important;
+            height: auto !important;
+            padding-top: 60px;
+            .my-face {
+                width: 250px !important;
+                height: 250px !important;
+            }
+            p {
+                width: 90% !important;
+                font-size: 25px !important;
+            }
+        }
+    }
 }
 @include laptop {
     #home-content {
@@ -88,4 +130,5 @@
         bottom: 40px;
         left: 30px;
     }
+
 }

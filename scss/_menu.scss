@@ -1,6 +1,6 @@
 // LOGO
 .logo {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 40px;
     img {
@@ -10,7 +10,7 @@
 // MENU BTN
 .menu-btn {
     @include easeOut;
-    position: absolute;
+    position: fixed;
     top: 35px;
     right: 40px;
     z-index: 5;
@@ -45,7 +45,7 @@
 // MENU SECTIONS
 // Menu-right
 .menu-profile {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -76,7 +76,7 @@
 //Menu-left
 .menu-nav {
     list-style: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     margin: 0;
