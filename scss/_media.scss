@@ -26,6 +26,7 @@
         bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 10px !important;
     }
     .lg-heading {
         font-size: 5rem !important;
@@ -64,6 +65,7 @@
             p {
                 width: 90% !important;
                 font-size: 25px !important;
+                margin: 0 auto !important;
             }
         }
         .skill-set-container {
@@ -76,6 +78,12 @@
             }
         }
 
+    }
+    //CONTACT MEDIA
+    .contact {
+        h2 {
+            font-size: 20px !important;
+        }
     }
 }
 @include tablet {
@@ -113,7 +121,19 @@
             p {
                 width: 90% !important;
                 font-size: 25px !important;
+                margin: 0 auto !important;
             }
+        }
+    }
+    .social-icons {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+    }
+    //CONTACT MEDIA
+    .contact {
+        h2 {
+            font-size: 30px !important;
         }
     }
 }
