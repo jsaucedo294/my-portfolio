@@ -124,6 +124,15 @@
                 margin: 0 auto !important;
             }
         }
+        .skill-set-container {
+            grid-template-columns: auto !important;
+            .skill-container {
+                width: 400px !important;
+                .skill-tag h3 {
+                    font-size: 40px !important;
+                }
+            }
+        }
     }
     .social-icons {
         position: absolute;

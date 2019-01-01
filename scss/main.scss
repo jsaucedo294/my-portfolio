@@ -124,12 +124,12 @@ a {
       .skill-set-container {
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         grid-template-rows: repeat(2, 100);
         margin-bottom: 60px;;
         .skill-container {
           margin: 0 auto;
-          width: 400px;
+          width: 600px;
           .skill-tag {
             display: flex;
             flex-direction: row;
