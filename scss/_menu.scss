@@ -3,8 +3,14 @@
     position: fixed;
     top: 20px;
     left: 40px;
-    img {
+    a > .my-logo {
+        fill: #fff;
         width: 70px;
+        height: 70px;
+        @include easeOut;
+        &:hover {
+            fill: $secondary-color;
+        }
     }
 }
 // MENU BTN

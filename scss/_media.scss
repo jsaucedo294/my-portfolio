@@ -26,7 +26,12 @@
         bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 10px !important;
+        a {
+            .media-icon {
+                width: 35px !important;
+                height: 35px !important;
+            }
+        }
     }
     .lg-heading {
         font-size: 5rem !important;
@@ -52,32 +57,29 @@
             transform: translate3d(0, 0, 0);
         }
     }
-    //ABOUT MEDIA
-    #about {
-        .about-me {
-            flex-direction: column  !important;
-            height: auto !important;
-            padding-top: 60px;
-            .my-face {
-                width: 250px !important;
-                height: 250px !important;
-            }
-            p {
-                width: 90% !important;
-                font-size: 25px !important;
-                margin: 0 auto !important;
+    //ABOUT MEDIA 
+    .about-me {
+        flex-direction: column  !important;
+        height: auto !important;
+        padding-top: 60px;
+        .my-face {
+            width: 250px !important;
+            height: 250px !important;
+        }
+        p {
+            width: 90% !important;
+            font-size: 25px !important;
+            margin: 0 auto !important;
+        }
+    }
+    .skill-set-container {
+        grid-template-columns: auto !important;
+        .skill-container {
+            width: 300px !important;
+            .skill-tag h3 {
+                font-size: 30px !important;
             }
         }
-        .skill-set-container {
-            grid-template-columns: auto !important;
-            .skill-container {
-                width: 300px !important;
-                .skill-tag h3 {
-                    font-size: 30px !important;
-                }
-            }
-        }
-
     }
     //CONTACT MEDIA
     .contact {
@@ -109,28 +111,26 @@
         }
     }
     //ABOUT MEDIA
-    #about {
-        .about-me {
-            flex-direction: column  !important;
-            height: auto !important;
-            padding-top: 60px;
-            .my-face {
-                width: 250px !important;
-                height: 250px !important;
-            }
-            p {
-                width: 90% !important;
-                font-size: 25px !important;
-                margin: 0 auto !important;
-            }
+    .about-me {
+        flex-direction: column  !important;
+        height: auto !important;
+        padding-top: 60px;
+        .my-face {
+            width: 250px !important;
+            height: 250px !important;
         }
-        .skill-set-container {
-            grid-template-columns: auto !important;
-            .skill-container {
-                width: 400px !important;
-                .skill-tag h3 {
-                    font-size: 40px !important;
-                }
+        p {
+            width: 90% !important;
+            font-size: 25px !important;
+            margin: 0 auto !important;
+        }
+    }
+    .skill-set-container {
+        grid-template-columns: auto !important;
+        .skill-container {
+            width: 400px !important;
+            .skill-tag h3 {
+                font-size: 40px !important;
             }
         }
     }
@@ -138,6 +138,12 @@
         position: absolute;
         bottom: 40px;
         left: 30px;
+        a {
+            .media-icon {
+                width: 35px !important;
+                height: 35px !important;
+            }
+        }
     }
     //CONTACT MEDIA
     .contact {

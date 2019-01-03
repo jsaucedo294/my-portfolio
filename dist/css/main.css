@@ -3,8 +3,13 @@
   position: fixed;
   top: 20px;
   left: 40px; }
-  .logo img {
-    width: 70px; }
+  .logo a > .my-logo {
+    fill: #fff;
+    width: 70px;
+    height: 70px;
+    transition: all .5s ease-in-out; }
+    .logo a > .my-logo:hover {
+      fill: #F7931E; }
 
 .menu-btn {
   transition: all .5s ease-in-out;
@@ -108,8 +113,10 @@
     position: absolute;
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px !important; }
+    transform: translateX(-50%); }
+    .social-icons a .media-icon {
+      width: 35px !important;
+      height: 35px !important; }
   .lg-heading {
     font-size: 5rem !important; }
   .menu-btn {
@@ -127,22 +134,22 @@
     transform: translate3d(1000px, 0, 0); }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  #about .about-me {
+  .about-me {
     flex-direction: column  !important;
     height: auto !important;
     padding-top: 60px; }
-    #about .about-me .my-face {
+    .about-me .my-face {
       width: 250px !important;
       height: 250px !important; }
-    #about .about-me p {
+    .about-me p {
       width: 90% !important;
       font-size: 25px !important;
       margin: 0 auto !important; }
-  #about .skill-set-container {
+  .skill-set-container {
     grid-template-columns: auto !important; }
-    #about .skill-set-container .skill-container {
+    .skill-set-container .skill-container {
       width: 300px !important; }
-      #about .skill-set-container .skill-container .skill-tag h3 {
+      .skill-set-container .skill-container .skill-tag h3 {
         font-size: 30px !important; }
   .contact h2 {
     font-size: 20px !important; } }
@@ -163,27 +170,30 @@
     transform: translate3d(1000px, 0, 0); }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  #about .about-me {
+  .about-me {
     flex-direction: column  !important;
     height: auto !important;
     padding-top: 60px; }
-    #about .about-me .my-face {
+    .about-me .my-face {
       width: 250px !important;
       height: 250px !important; }
-    #about .about-me p {
+    .about-me p {
       width: 90% !important;
       font-size: 25px !important;
       margin: 0 auto !important; }
-  #about .skill-set-container {
+  .skill-set-container {
     grid-template-columns: auto !important; }
-    #about .skill-set-container .skill-container {
+    .skill-set-container .skill-container {
       width: 400px !important; }
-      #about .skill-set-container .skill-container .skill-tag h3 {
+      .skill-set-container .skill-container .skill-tag h3 {
         font-size: 40px !important; }
   .social-icons {
     position: absolute;
     bottom: 40px;
     left: 30px; }
+    .social-icons a .media-icon {
+      width: 35px !important;
+      height: 35px !important; }
   .contact h2 {
     font-size: 30px !important; } }
 
@@ -218,6 +228,13 @@ body {
     justify-content: center; }
     body .social-icons a {
       margin: 0 20px; }
+      body .social-icons a .media-icon {
+        fill: #fff;
+        width: 50px;
+        height: 50px;
+        transition: all .5s ease-in-out; }
+        body .social-icons a .media-icon:hover {
+          fill: #F7931E; }
 
 #home {
   background-color: #333;
@@ -276,58 +293,58 @@ a {
   a:hover {
     color: #F7931E; }
 
-#about .about-me {
+.about-me {
   width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center; }
-  #about .about-me .my-face {
+  .about-me .my-face {
     width: 350px;
     height: 350px;
     border-radius: 50%;
     border: solid 6px #fff; }
-  #about .about-me p {
+  .about-me p {
     width: 40%;
     font-size: 35px;
     color: #fff;
     padding: 10px;
     margin-left: 70px; }
 
-#about .my-skills {
+.my-skills {
   width: 100%;
   height: 70vh; }
 
-#about .md-heading {
+.md-heading {
   font-size: 60px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px; }
 
-#about .skill-set-container {
+.skill-set-container {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-template-rows: repeat(2, 100);
   margin-bottom: 60px; }
-  #about .skill-set-container .skill-container {
+  .skill-set-container .skill-container {
     margin: 0 auto;
     width: 600px; }
-    #about .skill-set-container .skill-container .skill-tag {
+    .skill-set-container .skill-container .skill-tag {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
-      #about .skill-set-container .skill-container .skill-tag h3 {
+      .skill-set-container .skill-container .skill-tag h3 {
         font-size: 40px;
         color: #fff;
         margin: 0; }
-    #about .skill-set-container .skill-container .skillset {
+    .skill-set-container .skill-container .skillset {
       width: 100%;
       height: 20px;
       background-color: #fff; }
-      #about .skill-set-container .skill-container .skillset .skill {
+      .skill-set-container .skill-container .skillset .skill {
         height: 20px;
         background-color: #F7931E; }
 

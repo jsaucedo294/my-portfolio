@@ -22,6 +22,15 @@ body {
         justify-content: center;
         a {
             margin: 0 20px;
+            .media-icon {
+                fill: #fff;
+                width: 50px;
+                height: 50px;
+                @include easeOut;
+                &:hover {
+                    fill: $secondary-color;
+                }
+            }
         }
     }
 }
@@ -86,72 +95,70 @@ a {
 }
 
 //ABOUT PAGE
-#about {
-    .about-me {
-        width: 100%;
-        height: 80vh;
+.about-me {
+    width: 100%;
+    height: 80vh;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .my-face {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        border: solid 6px #fff;
+    }
+    p {
+        width: 40%;
+        font-size: 35px;
+        color: #fff;
+        padding: 10px;
+        margin-left: 70px;
+    }
+    }
+    .my-skills {
+        width: 100%;
+        height: 70vh;
+    }
+    .md-heading {
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    // Skillset
+    .skill-set-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: repeat(2, 100);
+    margin-bottom: 60px;;
+    .skill-container {
+        margin: 0 auto;
+        width: 600px;
+        .skill-tag {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .my-face {
-          width: 350px;
-          height: 350px;
-          border-radius: 50%;
-          border: solid 6px #fff;
+        justify-content: space-between;
+        h3 {
+            font-size: 40px;
+            color: #fff;
+            margin: 0;
         }
-        p {
-          width: 40%;
-          font-size: 35px;
-          color: #fff;
-          padding: 10px;
-          margin-left: 70px;
         }
-      }
-      .my-skills {
-          width: 100%;
-          height: 70vh;
-      }
-      .md-heading {
-        font-size: 60px;
-        color: #fff;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      // Skillset
-      .skill-set-container {
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-        grid-template-rows: repeat(2, 100);
-        margin-bottom: 60px;;
-        .skill-container {
-          margin: 0 auto;
-          width: 600px;
-          .skill-tag {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            h3 {
-              font-size: 40px;
-              color: #fff;
-              margin: 0;
-            }
-          }
-          .skillset{
-            width: 100%;
-            height: 20px;
-            background-color: #fff;
-          .skill {
-            height: 20px;
-            background-color: $secondary-color;
-            }
-          }
+        .skillset{
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        .skill {
+        height: 20px;
+        background-color: $secondary-color;
         }
-      }
-}
+        }
+    }
+    }
 // CONTACT PAGE
 .contact {
     display: flex;
